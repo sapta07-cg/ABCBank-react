@@ -1,3 +1,72 @@
+.dash-bord {
+  background-image: url("https://images.unsplash.com/photo-1533745848184-3db07256e163?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80");
+  background-size: cover;
+  height: auto;
+  width: auto;
+  color: #bbeb10;
+}
+.dashbord2 {
+  background-color: rgb(30, 43, 71);
+  background-size: cover;
+  height: 100px;
+}
+
+.customer {
+  background-color: rgb(33, 49, 83);
+  background-size: cover;
+  height: 100vh;
+  color: #bbeb10;
+}
+.loan-list {
+  background-color: rgb(33, 49, 83);
+  background-size: cover;
+  height: 100vh;
+}
+.upsert {
+  background-color: rgb(30, 43, 71);
+  background-size: cover;
+  height: 100vh;
+}
+
+.first-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  margin-bottom: 25px;
+}
+
+.footer-section {
+  width: 100%;
+  height: auto;
+  padding: 70px 0 20px 0;
+  background: #00abff;
+  position: absolute;
+}
+
+.footer-section p {
+  color: white;
+}
+
+.footer-section li a {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.footer-section h3 {
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
 .App {
   text-align: center;
 }
