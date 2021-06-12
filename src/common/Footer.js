@@ -17,28 +17,19 @@ export function Footer() {
             <div>
               <h3>NAVIGATIONl LINK</h3>
               <li>
-                <a href="/home">Home</a>
+                <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Services</a>
+                <a href="#">LAD</a>
               </li>
               <li>
-                <a href="#">Learn</a>
+                <a href="#">ABOUT</a>
               </li>
               <li>
-                <a href="#">LOGIN</a>
+                <a href="#">CONTACT</a>
               </li>
               <li>
-                <a href="#">REGISTER</a>
-              </li>
-              <li>
-                <a href="/about_us">ABOUT</a>
-              </li>
-              <li>
-                <a href="/contact_us">CONTACT</a>
-              </li>
-              <li>
-                <a href="/admin">ADMIN</a>
+                <a href="#">ADMIN</a>
               </li>
             </div>
           </div>

@@ -1,0 +1,73 @@
+.first-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.bg-container {
+  background-color: lightblue;
+  min-height: 100vh;
+}
+.item-style {
+  color: black;
+  font-weight: bold;
+}
+.status-box {
+  width: 300px;
+  height: 50px;
+  background-color: lightgreen;
+  color: blue;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.loan-approved {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+.loan-rejected {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+.table-bg-top {
+  background-color: snow;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.customer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+.home-bg-container {
+  background-color: cornflowerblue;
+  background-size: cover;
+  height: 100vh;
+}
+.button {
+  justify-content: center;
+  align-items: center;
+}
+.home-image {
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}

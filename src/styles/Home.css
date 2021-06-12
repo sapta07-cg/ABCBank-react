@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #606060;
+}
+h2 {
+  font-size: 0.9rem;
+  margin: 20px 0 15px 0;
+  font-weight: bold;
+  line-height: 1.1;
+  word-spacing: 4px;
+}
+.header-section {
+  width: 100%;
+  height: inherit;
+  color: #000;
+  text-align: center;
+  position: relative;
+}
+.center-div {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.header-buttons a {
+  border: 1px solid white;
+  border-radius: 100px;
+  margin: 0 5px;
+  padding: 12px 35px;
+  outline: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+}
+.header-buttons a:hover {
+  color: #50d1c0;
+  background: white;
+  text-decoration: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+.center-div p {
+  font-size: 1.5rem;
+  padding: 10px 0 20px 0;
+  color: orange;
+}
+.heading {
+  text-align: center;
+  margin-top: 5%;
+  padding: 2%;
+  margin-bottom: 10%;
+}
+.header-section .heading p {
+  font-size: 1.5rem;
+  padding: 10px 0 20px 0;
+  color: orange;
+}
+.header-section .heading h1 {
+  font-size: 2.5rem;
+}
+.al {
+  border: 1px solid white;
+  border-radius: 100px;
+  margin: 0 px;
+  padding: 0px;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+}
+#btn {
+  margin: 0%;
+  padding: 0%;
+  outline: none;
+  border-radius: 100%;
+  background-color: white;
+}

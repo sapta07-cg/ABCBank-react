@@ -36,8 +36,8 @@ export function CustomerProfile() {
           <tbody>
             {[...state.lad.list].map((item, index) => (
               <tr key={index}>
-                <td>{item.customerrefid}</td>
-                {item.loanamount > 1 ? (
+                <td>{item.customerRefId}</td>
+                {item.loanAmount > 1 ? (
                   <td className="text-success"> Approved</td>
                 ) : (
                   <td className="text-danger"> Rejected</td>

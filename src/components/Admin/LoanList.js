@@ -32,7 +32,7 @@ export function LoanList() {
     dispatch(updateRefLoan(item));
 
     //from page..
-    history.push("/create-loan");
+    history.push("/admin/create-loan");
   };
 
   const getLoanTypeById = (item) => {

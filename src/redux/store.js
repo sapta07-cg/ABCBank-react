@@ -6,13 +6,15 @@ import thunk from "redux-thunk";
 import { EmployeeReducer } from "./EmployeeReducer";
 import { LadReducer } from "./LadReducer";
 import { AdminReducer } from "./AdminReducer";
+import { UserRegisterReducer } from "./UserRegisterReducer";
+import { AdminLoginReducer } from "./AdminLoginReducer";
 
 const rootReducer = combineReducers({
   employee: EmployeeReducer,
   admin: AdminReducer,
   lad: LadReducer,
-  //admin : DepartRducer,
-  //vechil: VechuileReucer
+  UserRegister: UserRegisterReducer,
+  AdminLogin: AdminLoginReducer,
 });
 
 //const store = createStore(rootReducer);

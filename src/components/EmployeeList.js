@@ -32,67 +32,73 @@ export function EmployeeList() {
     dispatch(updateRefEmployee(item));
 
     // form page
-    history.push("/create-employee");
-  };
-
-  const getAllEmployee = (item) => {
-    dispatch(getAllEmployeeAction(item));
+    history.push("/home/customerloanrequest");
   };
 
   return (
-    <div className="row">
-      <div className="col-3 col-md-2 d-none d-md-block"></div>
-      <div className="col-12 col-md-8">
-        <h3 className="alert alert-secondary">Customer List</h3>
+    <>
+      <div className="customer">
+        <div className="row">
+          <div className="col-3 col-md-2 d-none d-md-block"></div>
+          <div className="col-12 col-md-8">
+            <h3 className="alert alert-info">Customer List</h3>
 
-        {successOperation && (
-          <div className="alert alert-success">Opeation Success</div>
-        )}
+            {successOperation && (
+              <div className="alert alert-success">Opeation Success</div>
+            )}
 
-        <table className="table">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="col">Serial No</th>
-              <th scope="col">#CUSTOMERID</th>
-              <th scope="col">FIRSTNAME</th>
-              <th scope="col">LOANTYPE</th>
-              <th scope="col">EMAIL</th>
-              <th scope="col">MOBILE</th>
-              <th scope="col">GENDER</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[...state.employee.list].map((item, index) => (
-              <tr key={index}>
-                <th scope="row">{index + 1}</th>
-                <th scope="row">{item.id}</th>
-                <td>{item.firstName}</td>
-                <td>{item.loanType}</td>
-                <td>{item.email}</td>
-                <td>{item.mobile}</td>
-                <td>{item.gender}</td>
-                <td>
-                  <input
-                    type="button"
-                    value="Edit"
-                    onClick={() => updateEmployee(item)}
-                    className="btn btn-link"
-                  />{" "}
-                  /
-                  <input
-                    type="button"
-                    value="Delete"
-                    onClick={() => deleteEmployee(item, index)}
-                    className="btn btn-link text-danger"
-                  />
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+            {state.employee.error && (
+              <div className="alert alert-danger">Sever is offline</div>
+            )}
+
+            <table className="table">
+              <thead className="table table-bordered table-dark">
+                <tr>
+                  <th scope="col">Serial No</th>
+                  <th scope="col">#CUSTOMERID</th>
+                  <th scope="col">FIRSTNAME</th>
+                  <th scope="col">LOANTYPE</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">MOBILE</th>
+                  <th scope="col">GENDER</th>
+                  <th scope="col">AGE</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="table table-bordered table-success">
+                {[...state.employee.list].map((item, index) => (
+                  <tr key={index}>
+                    <th scope="row">{index + 1}</th>
+                    <th scope="row">{item.id}</th>
+                    <td>{item.firstName}</td>
+                    <td>{item.loanType}</td>
+                    <td>{item.email}</td>
+                    <td>{item.mobile}</td>
+                    <td>{item.gender}</td>
+                    <td>{item.age}</td>
+                    <td>
+                      <input
+                        type="button"
+                        value="Edit"
+                        onClick={() => updateEmployee(item)}
+                        className="btn-warning"
+                      />
+                      /
+                      <input
+                        type="button"
+                        value="Delete"
+                        onClick={() => deleteEmployee(item, index)}
+                        className="btn-danger"
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="col-3 col-md-2 d-none d-md-block"></div>
+        </div>
       </div>
-      <div className="col-3 col-md-2 d-none d-md-block"></div>
-    </div>
+    </>
   );
 }

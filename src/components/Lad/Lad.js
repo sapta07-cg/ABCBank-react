@@ -38,7 +38,9 @@ export function Lad() {
         </div>
 
         {successOperation && (
-          <div className="status-box">check status in loanlist page</div>
+          <div className="alert alert-primary">
+            check status in loanlist page
+          </div>
         )}
 
         <table className="table table-success">
@@ -65,7 +67,7 @@ export function Lad() {
                   <input
                     type="button"
                     onClick={() => GetCustomerLoanRequestById(item)}
-                    value="verify"
+                    value="Approval"
                     className="btn btn-primary m-2"
                   />
                 </td>

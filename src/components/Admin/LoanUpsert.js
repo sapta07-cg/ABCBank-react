@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+
 import {
   createLoanTypeAction,
   updateLoanTypeAction,
@@ -8,13 +8,11 @@ import {
 
 export function LoanUpsert() {
   const dispatch = useDispatch();
-  const history = useHistory();
   const fromEL = useRef();
   const state = useSelector((state) => state);
   console.log(state);
 
   const [successOperation, setSuccessOperation] = useState(false);
-  const [errorOperation, setErrorOperation] = useState(false);
 
   const [loanType, setLoanType] = useState(state.admin.refloan.loanType);
   const [minimumAge, setMinimumAge] = useState(state.admin.refloan.minimumAge);
@@ -57,30 +55,41 @@ export function LoanUpsert() {
     }
   };
 
-  const updateLoanProgram = () => {
-    dispatch(
-      updateLoanTypeAction({
-        loanId: state.admin.refloan.loanId,
-        loanType,
-        minimumAge,
-        maximumAge,
-      })
-    );
+  const updateLoanProgram = (e) => {
+    e.preventDefault();
+    console.log(loanType, minimumAge, maximumAge);
 
-    setSuccessOperation(true);
-    setTimeout(() => setSuccessOperation(false), 4000);
+    console.log(fromEL);
+    console.log(fromEL.current.checkValidity());
+    if (fromEL.current.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+      fromEL.current.classList.add("was-validated");
+    } else {
+      dispatch(
+        updateLoanTypeAction({
+          loanId: state.admin.refloan.loanId,
+          loanType,
+          minimumAge,
+          maximumAge,
+        })
+      );
 
-    //we have to rest the from after date get updated..
-    setLoanType("");
-    setMinimumAge("");
-    setMaximumAge("");
+      setSuccessOperation(true);
+      setTimeout(() => setSuccessOperation(false), 4000);
+
+      //we have to rest the from after date get updated..
+      setLoanType("");
+      setMinimumAge("");
+      setMaximumAge("");
+    }
   };
   return (
     <div className="upsert">
       <div className="row">
         <div className="col-3 col-md-3 d-none d-md-block"></div>
         <div className="col-12 col-md-6">
-          <h3 className="alert alert-secondary">
+          <h3 className="alert alert-info">
             {state.admin.refloan.loanId
               ? "Update LoanProgram"
               : "Create LoanProgram"}
@@ -143,13 +152,13 @@ export function LoanUpsert() {
               </div>
             </div>
 
-            <div className="mb-1">
+            <div className="mb-2">
               {state.admin.refloan.loanId ? (
                 <input
                   type="button"
                   className="btn btn-warning w-100"
                   value="Update Loan Program Data"
-                  onClick={() => updateLoanProgram()}
+                  onClick={(e) => updateLoanProgram(e)}
                 />
               ) : (
                 <input

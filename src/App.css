@@ -1,3 +1,16 @@
+.body {
+  height: 100%;
+  z-index: 30;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: auto;
+  background: linear-gradient(180deg, rgb(167, 93, 177), hsl(229, 29%, 64%));
+  background-size: 600% 100%;
+  animation: gradient 5s linear infinite;
+  animation-direction: alternate-reverse;
+}
+
 .dash-bord {
   background-image: url("https://images.unsplash.com/photo-1533745848184-3db07256e163?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80");
   background-size: cover;
